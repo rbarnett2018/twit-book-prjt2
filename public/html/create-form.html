@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Web Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link href="/public/css/create-form.css" rel="stylesheet" />
+  </head>
+
+  <body>
+   
+    <h1>Twit-Book</h1>
+    <div>
+      <h4>
+        Welcome to Twit-Book! Where you are able to create mock social media
+        profiles for fun or practice! Get started by clicking “Create”, then
+        customize away!
+      </h4>
+    </div>
+    <ul id="buttons">
+      <li>
+        <a href="/profiles/new" style="color: #d0c37e"><b>Create</b></a>
+      </li>
+      <li><a href="/profiles/edit">Update</a></li>
+      <li><a href="/profiles/edit">View</a></li>
+      <li><a href="/profiles/edit">Delete</a></li>
+    </ul>
+
+    <form action="/profiles/new" method="post">
+      <label for="name">Name: </label>
+      <input id="name" type="text" name="name" />
+
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" />
+
+      <label for="pfp">Profile picture:</label>
+
+      <input type="file" id="pfp" name="pfp" accept="image/png, image/jpeg" />
+
+      <label for="bio">Bio:</label>
+      <textarea id="bio" type="text" name="bio" maxlength="139"></textarea>
+
+      <input id="submit" type="submit" value="Create!" />
+    </form>
+     <script src="../js/create-form.js"></script>
+  </body>
+</html>

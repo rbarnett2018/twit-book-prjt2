@@ -1,0 +1,31 @@
+{
+  "name": "twit-book-prjt2",
+  "version": "1.0.0",
+  "description": "Project 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbarnett2018/Twit-Book-Project-2.git"
+  },
+  "author": "Ronald Barnett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbarnett2018/Twit-Book-Project-2/issues"
+  },
+  "homepage": "https://github.com/rbarnett2018/Twit-Book-Project-2#readme",
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.1",
+    "method-override": "^3.0.0",
+    "mongod": "^2.0.0",
+    "mongoose": "^6.1.6",
+    "node": "^17.3.0",
+    "nodemon": "^2.0.15"
+  }
+}

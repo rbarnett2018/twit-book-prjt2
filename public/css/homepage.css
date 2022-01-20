@@ -1,0 +1,39 @@
+body {
+  background: #1b73a5;
+  color: #fff;
+  padding: 25px;
+  font-family: sans-serif;
+}
+h1,
+h4 {
+  text-align: center;
+}
+h4 {
+  max-width: 750px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+#buttons li {
+  flex: auto;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+}
+.taskBox {
+  border: 0.5mm solid black;
+  display: block;
+  max-width: 700px;
+  height: 200px;
+  margin: auto;
+}

@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const create = require('./controller/create-form');
+const create = require('./routes/create-router');
 app.use('/create', create);
-const edit = require('./controller/update-form');
+const edit = require('./routes/update-router');
 app.use('/edit', edit);
-const deletE = require('./controller/delete-names');
+const deletE = require('./routes/delete-router');
 app.use('/delete', deletE);
-const view = require('./controller/view-names');
+const view = require('./routes/view-router');
 app.use('/view', view);
-// const routes = require('./routes/routes');
-// app.use('')
+
 const MongoClient = require('mongodb').MongoClient;
 const connectionString = "mongodb+srv://rbarnett2018:Munmun08!!!!@ronaldcluster.ncai2.mongodb.net/RonaldCluster?retryWrites=true&w=majority";
+
 MongoClient.connect(connectionString, (err, client) => {
     const db = client.db('RonaldCluster');
 

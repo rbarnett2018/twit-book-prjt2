@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Web Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link href="/public/css/update-form.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Twit-Book</h1>
+    <div>
+        <h4>
+            Welcome to Twit-Book! Where you are able to create mock social media
+            profiles for fun or practice! Get started by clicking “Create”, then
+            customize away!
+        </h4>
+    </div>
+    <ul id="buttons">
+        <li><a href="/profiles/new">Create</a></li>
+        <li><a href="/profiles/edit">Update</a></li>
+        <li><a href="/profiles/view">View</a></li>
+        <li><a href="/profiles/delete">Delete</a></li>
+    </ul>
+    <div class="taskBox">
+        <form action="/profiles/edit/:name" method="post">
+            <label for="name">Name: </label>
+            <input id="name" type="text" name="name" />
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" />
+
+           
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" type="text" name="bio" maxlength="139"></textarea>
+            <input id="submit" type="submit" value="Update!" />
+        </form>
+        <div>
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522default%2Bprofile%2Bpicture%2522&psig=AOvVaw2Ou5xeCV62qu1oL06ZAj_R&ust=1642795836511000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIDM7MSRwfUCFQAAAAAdAAAAABAD" alt="profile-pic">
+           </div>
+    </div>
+
+    <div class="grid">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <script src="/public/js/update-form.js"></script>
+</body>
+
+</html>

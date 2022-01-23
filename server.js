@@ -13,6 +13,7 @@ const deletE = require("./routes/delete-router");
 
 app.set("view engine", "ejs");
 const bodyParser = require("body-parser");
+app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const mongoURI =
@@ -26,7 +27,7 @@ mongoose
     console.log(`Connected to db: ${instance.connections[0].name}`)
   )
   .catch((error) => console.log("Connection failed!", error));
-  app.use(express.static('public'))
+  app.use(express.static('public/css'))
 app.use("/create", create);
 app.use("/edit", edit);
 app.use("/delete", deletE);

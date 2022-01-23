@@ -4,7 +4,10 @@ const Profile = require('../model/profile-model');
 
 // Display update names on GET.
 exports.profile_update_get_names = (req, res) => {
-    res.render('update-names');
+   Profile.find({})
+   const profiles = await query.exec();
+   console.log(profiles.name);
+   
 };
 
 // Display detail page for a specific profile.

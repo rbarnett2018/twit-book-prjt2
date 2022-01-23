@@ -3,9 +3,9 @@ const router = express.Router();
 
 const deleteController = require('../controller/delete-names');
 
-router.get('/', delete-names.profile_delete_get);
-router.get('/:name', delete-names.profile_delete_post);
-router.delete('/:name', delete-names.profile_delete_popup);
+router.get('/', deleteController.profile_delete_get);
+router.get('/:name', deleteController.profile_delete_post);
+router.delete('/:name', deleteController.profile_delete_popup);
 
 
 

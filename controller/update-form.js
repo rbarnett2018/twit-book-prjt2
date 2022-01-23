@@ -4,15 +4,16 @@ const Profile = require('../model/profile-model');
 
 // Display update names on GET.
 exports.profile_update_get_names = (req, res) => {
-    console.log('404');
+    res.render('update-names');
 };
 
 // Display detail page for a specific profile.
 exports.profile_detail = (req, res) => {
-     console.log(`404 ${req.params.id}`); 
+     res.render('update-form'); 
 };
 
 // Handle update on PUT.
 exports.profile_update_put = (req, res) => {
-    console.log('404');
+    res.render('home');
 };
+

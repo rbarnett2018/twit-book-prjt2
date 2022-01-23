@@ -4,5 +4,6 @@ const Profile = require('../model/profile-model');
 
 // Display list
 exports.profile_list = (req, res) => {
-    console.log('404');
+    res.render('home');
 };
+

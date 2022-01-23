@@ -3,10 +3,9 @@ const Schema = mongoose.Schema;
 
 const UserProfile = new Schema ({
     name: String,
-    dateOfBirth: Date,
+    birthday: Date,
     bio: String,
-    picture: String,
 });
 
-module.exports = Profile = mongoose.model('Profile', UserProfile);
+module.exports = Profile = mongoose.model('Profile', UserProfile, "Profiles");
 

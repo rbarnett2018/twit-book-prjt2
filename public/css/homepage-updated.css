@@ -52,3 +52,7 @@ h4 {
 .cell {
   background: black;
 }
+h1{
+  text-decoration: none;
+  color: white;
+}

@@ -1,41 +1,37 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
-const create = require('./routes/create-router');
-app.use('/create', create);
-const edit = require('./routes/update-router');
-app.use('/edit', edit);
-const deletE = require('./routes/delete-router');
-app.use('/delete', deletE);
-const view = require('./routes/view-router');
-app.use('/view', view);
+const mongoose = require("mongoose");
+require("dotenv").config();
+const connectionString = process.env.FOO;
 
-const MongoClient = require('mongodb').MongoClient;
-const connectionString = "mongodb+srv://rbarnett2018:Munmun08!!!!@ronaldcluster.ncai2.mongodb.net/RonaldCluster?retryWrites=true&w=majority";
+const create = require("./routes/create-router");
+const edit = require("./routes/update-router");
+const view = require("./routes/view-router");
+const home = require("./routes/home-router");
+const deletE = require("./routes/delete-router");
 
-MongoClient.connect(connectionString, (err, client) => {
-    const db = client.db('RonaldCluster');
+app.set("view engine", "ejs");
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
 
-
-    if (err) return console.error(err)
-  console.log('Connected to Database')
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const mongoURI =
+  process.env.NODE_ENV === "production" ? process.env.DB_URL : connectionString;
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((instance) =>
+    console.log(`Connected to db: ${instance.connections[0].name}`)
+  )
+  .catch((error) => console.log("Connection failed!", error));
+  app.use(express.static('public'))
+app.use("/create", create);
+app.use("/edit", edit);
+app.use("/delete", deletE);
+app.use("/view", view);
+app.use("/", home);
 app.listen(port, () => {
-    console.log(`Listening on Port: ${port}`);
+  console.log(`Listening on Port: ${port}`);
 });

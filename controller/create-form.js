@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const Profile = require('../model/profile-model');
 const bodyParser=require("body-parser");
-const db = require('../model/db');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

@@ -2,8 +2,6 @@ const Profile = require('../model/profile-model');
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const { db } = require('../model/profile-model');
-const { strictEqual } = require('assert');
 app.use(bodyParser.json());
 
 // ROUTE HANDLER CALLBACK FUNCTIONS

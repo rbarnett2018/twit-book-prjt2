@@ -1,0 +1,64 @@
+body {
+    background: #1B73A5;;
+    color: #fff;
+    padding: 25px;
+    font-family: sans-serif;
+  }
+  h1, h4 {
+    text-align: center;
+  }
+  h4{
+     max-width: 750px;
+      margin: auto;
+      padding-bottom: 15px;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  margin:0;
+  padding:0;
+     max-width: 700px;
+     margin: auto;
+  }
+  a:hover {
+    color:#D0C37E;
+  }
+  a:active {
+    color:#D0C37E;
+  }
+  #buttons li {
+    flex: auto;
+    border-radius: .5em;
+    padding: .5em;
+    text-align: center;
+  }
+  #names {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 5mm;
+     max-width: 640px;
+     margin: auto;
+     max-height:144px;
+     overflow:auto;
+  }
+  #names li{
+    flex: auto;
+    padding:inherit;
+    height: 34px;
+  }
+  .taskBox {
+    border: .5mm solid black;
+      display: block;
+      max-width: 700px;
+      height: 200px;
+      margin: auto;
+      text-align:center;
+  }
+  h5{
+    display:inline;
+    text-align: center;
+  }

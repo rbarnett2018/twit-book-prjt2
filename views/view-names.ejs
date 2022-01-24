@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Web Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href='update-names.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <h1><a href="/">Twit-Book</a></h1>
+    <div>
+        <h4>Welcome to Twit-Book! Where you are able to create mock social media profiles for fun or practice! Get
+            started by clicking “Create”, then customize away!
+        </h4>
+    </div>
+    <ul id="buttons">
+        <li><a href="/create">Create</a></li>
+        <li><a href="/edit">Update</a></li>
+        <li><a href="/view">View</a></li>
+        <li><a href="/delete">Delete</a></li>
+    </ul>
+    <div class='taskBox'>
+      <h5> Select a username below to update</h5>
+        <ul id="names">
+            <li><a href='/view/:<%= name1 %>'><%= name1 %></a></li>
+<li><a href='/view/:<%= name2 %>'><%= name2 %></a></li>
+<li><a href='/view/:<%= name3 %>'><%= name3 %></a></li>
+<li><a href='/view/:<%= name4 %>'><%= name4 %></a></li>
+<li><a href='/view/:<%= name5 %>'><%= name5 %></a></li>
+<li><a href='/view/:<%= name6 %>'><%= name6 %></a></li>
+<li><a href='/view/:<%= name7 %>'><%= name7 %></a></li>
+<li><a href='/view/:<%= name8 %>'><%= name8 %></a></li>
+
+        </ul>
+    </div>
+
+    <script src='/public/js/update-names.js'></script>
+</body>
+
+</html>

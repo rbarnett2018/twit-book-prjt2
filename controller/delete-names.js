@@ -1,11 +1,30 @@
-const { db } = require('../model/profile-model');
 const Profile = require('../model/profile-model');
 
 // ROUTE HANDLER CALLBACK FUNCTIONS
 
 // Display delete form on GET.
 exports.profile_delete_get = (req, res) => {
-    res.render('delete-names');
+    namesPopulated = [
+        'Ronald Barnett',
+        'Clear Carter',
+        'Chimene Barnett',
+        'Ginger Barnett',
+        'Torry Robinson',
+        'Keylis Bridgeforth',
+        'Cleo Carter',
+        'Beauty Barnett'
+    ]
+     res.render('delete-names', {
+         name1:namesPopulated[0],
+         name2:namesPopulated[1],
+         name3:namesPopulated[2],
+         name4:namesPopulated[3],
+         name5:namesPopulated[4],
+         name6:namesPopulated[5],
+         name7:namesPopulated[6],
+         name8:namesPopulated[7],
+     })
+     
 };
 
 // Handle delete on POST.

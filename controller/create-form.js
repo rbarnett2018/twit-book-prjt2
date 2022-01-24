@@ -17,9 +17,9 @@ exports.profile_create_get = (req, res) => {
 
 // Handle create on POST.
 exports.profile_create_post = (req, res) => {
-    console.log('Hitting post');
+    
  const newProfile = new Profile(req.body);
- console.log(req.body);
+ 
  newProfile.save()
  .then( () => {
      res.render('home');

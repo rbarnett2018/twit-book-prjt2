@@ -1,4 +1,4 @@
-
+const { db } = require('../model/profile-model');
 const Profile = require('../model/profile-model');
 
 // ROUTE HANDLER CALLBACK FUNCTIONS
@@ -10,7 +10,14 @@ exports.profile_delete_get = (req, res) => {
 
 // Handle delete on POST.
 exports.profile_delete_post = (req, res) => {
-    res.render('home');
+    let nameId = req.params;
+    console.log(nameId);
+
+   db.collection('Profiles').deleteOne({name: nameId})
+   .then( (result) => {
+       res.render('home');
+   })
+    
 };
 
 // Display pop up 

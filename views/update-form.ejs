@@ -5,7 +5,7 @@
     <title>Basic Web Page</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link href="update-form.css" rel="stylesheet" />
+    <link href="/update-form.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,20 +26,20 @@
 
 
     <div class="taskBox">
-        <form action='/edit/:name' method='PUT'></form>
-            <label for="name">Name: </label>
-            <input id="name" type="text" name="name" value="<%= name %>" />
+        <form action="/edit/<%=name%>?_method=PUT" method="POST"></form>
+        <label for="name"></label>
+        <input id="name" type="text" name="name" value="<%= name %>" />
 
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday" value="<%= birthday %>"/>
+        <label for="birthday"></label>
+        <input type="text" id="birthday" name="birthday" value="<%= birthday %>" />
 
-           
 
-            <label for="bio">Bio:</label>
-            <textarea id="bio" type="text" name="bio" maxlength="139"></textarea>
-            <input id="submit" type="submit" value="Update!" value="<%= bio %>"/>
+
+        <label for="bio"></label>
+        <textarea id="bio" type="text" name="bio" maxlength="139">"<%= bio %>"</textarea>
+        <input id="submit" type="submit" value="Update!"  />
         </form>
-        
+
     </div>
 
 

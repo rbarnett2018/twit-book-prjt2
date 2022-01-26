@@ -32,12 +32,22 @@ exports.profile_list = (req, res) => {
 })};
 // Display homepage with enlarged profile
 exports.profile_enlarged = (req, res) => {
-    let profile = req.params.name;
-    let profileS = profile.slice(1);
-    Profile.find({name: profileS})
+    let nameId = req.params.name;
+    
+    Profile.find({name: nameId})
+    
     .then((Profile) => {
-        console.log(profileS)
+        
+        
+      let name = nameId; 
+       let birthday = Profile[0].birthday;
+      let bio = Profile[0].bio;
+      res.render('view-specific', {
+        name: name,
+        birthday: birthday,
+        bio: bio
+      })
     })
-    // res.render('view-specific');
+    console.log(res.body);
 };
 

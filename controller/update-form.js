@@ -36,8 +36,8 @@ exports.profile_update_get_names = (req, res) => {
 // Display edit form.
 exports.profile_detail = (req, res) => {
   let nameId = req.params.name;
-    let nameIdS = nameId.slice(1);
-    Profile.find({name: nameIdS})
+    
+    Profile.find({name: nameId})
     .then((Profile) => {
       let name = Profile[0].name; 
        let birthday = Profile[0].birthday;
@@ -52,12 +52,10 @@ exports.profile_detail = (req, res) => {
 
 // Handle update on PUT.
 exports.profile_update_put = (req, res) => {
-  console.log("Route hit");
-  // let nameId = req.params.name;
-  //   let nameIdS = nameId.slice(1);
-  // let data = req.body;
-  // console.log(data);
-  // Profile.findOneAndUpdate({name: nameIdS, data});
-  // res.redirect('home');
+  console.log(req.params.name, req.body);
+Profile.findByIdAndUpdate(req.params.id, req.body)
+
+res.render('home');
 };
+ 
 

@@ -5,13 +5,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const connectionString = process.env.FOO;
 const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
+
 const create = require("./routes/create-router");
 const edit = require("./routes/update-router");
 const view = require("./routes/view-router");
 const home = require("./routes/home-router");
 const deletE = require("./routes/delete-router");
-
+app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 const bodyParser = require("body-parser");
 app.use(express.json())

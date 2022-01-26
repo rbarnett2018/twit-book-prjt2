@@ -37,15 +37,15 @@ exports.profile_delete_get = (req, res) => {
 // Handle delete on POST.
 exports.profile_delete_post = (req, res) => {
     let nameId = req.params.name;
-    let nameIdS = nameId.slice(1);
+    
     
 
-   db.collection('Profiles').deleteOne({name: nameIdS})
+   db.collection('Profiles').deleteOne({name: nameId})
    .then( () => {
     res.render('home');
 })
 .catch(err => {
-    res.status(400).send(`Unable to delete ${nameIdS}`);
+    res.status(400).send(`Unable to delete ${nameId}`);
     console.log(err);
 });
 };

@@ -26,8 +26,8 @@
       <li><a href="/delete">Delete</a></li>
     </ul>
 
-    <form action="/edit/<%=name%>?_method=PUT" method="POST"></form>
-        <input name="_method" type="hidden" value="PUT">
+    <form action="/edit/<%=name%>?_method=PUT" method="POST">
+
         <label for="name"></label>
         <input id="name" type="text" name="name" value="<%= name %>" />
 
@@ -38,6 +38,8 @@
 
         <label for="bio"></label>
         <textarea id="bio" type="text" name="bio" maxlength="139">"<%= bio %>"</textarea>
+        <label for="Update"></label>
+      
         <input  id="submit" type="submit" value="Update!"  />
     </form>
      <script src="/public/js/create-form.js"></script>

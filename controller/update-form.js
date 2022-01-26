@@ -52,7 +52,12 @@ exports.profile_detail = (req, res) => {
 
 // Handle update on PUT.
 exports.profile_update_put = (req, res) => {
-  Profile[req.params.index] = req.body
-    res.redirect('home');
+  console.log("Route hit");
+  // let nameId = req.params.name;
+  //   let nameIdS = nameId.slice(1);
+  // let data = req.body;
+  // console.log(data);
+  // Profile.findOneAndUpdate({name: nameIdS, data});
+  // res.redirect('home');
 };
 

@@ -4,7 +4,8 @@ const port = 3000;
 const mongoose = require("mongoose");
 require("dotenv").config();
 const connectionString = process.env.FOO;
-
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 const create = require("./routes/create-router");
 const edit = require("./routes/update-router");
 const view = require("./routes/view-router");

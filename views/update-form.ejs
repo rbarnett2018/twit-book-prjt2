@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Basic Web Page</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link href="/update-form.css" rel="stylesheet" />
-</head>
+    <link href="/create-form.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
+   
     <h1><a href="/">Twit-Book</a></h1>
     <div>
-        <h4>
-            Welcome to Twit-Book! Where you are able to create mock social media
-            profiles for fun or practice! Get started by clicking “Create”, then
-            customize away!
-        </h4>
+      <h4>
+        Welcome to Twit-Book! Where you are able to create mock social media
+        profiles for fun or practice! Get started by clicking “Create”, then
+        customize away!
+      </h4>
     </div>
     <ul id="buttons">
-        <li><a href="/create">Create</a></li>
-        <li><a href="/edit">Update</a></li>
-        <li><a href="/view">View</a></li>
-        <li><a href="/delete">Delete</a></li>
+      <li>
+        <a href="/create" style="color: #d0c37e"><b>Create</b></a>
+      </li>
+      <li><a href="/edit">Update</a></li>
+      <li><a href="/view">View</a></li>
+      <li><a href="/delete">Delete</a></li>
     </ul>
 
-
-    <div class="taskBox">
-        <form action="/edit/<%=name%>?_method=PUT" method="POST"></form>
+    <form action="/edit/<%=name%>?_method=PUT" method="POST"></form>
+        <input name="_method" type="hidden" value="PUT">
         <label for="name"></label>
         <input id="name" type="text" name="name" value="<%= name %>" />
 
@@ -37,23 +38,9 @@
 
         <label for="bio"></label>
         <textarea id="bio" type="text" name="bio" maxlength="139">"<%= bio %>"</textarea>
-        <input id="submit" type="submit" value="Update!"  />
-        </form>
-
-    </div>
-
-
-    <div class="grid">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-    </div>
-    <script src="/public/js/update-form.js"></script>
-</body>
-
+        <input  id="submit" type="submit" value="Update!"  />
+    </form>
+     <script src="/public/js/create-form.js"></script>
+  </body>
 </html>
+
